@@ -4,21 +4,30 @@ export default function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <main className="container">
-      <p className="eyebrow">Introducing</p>
-      <h1>Hello, world.</h1>
-      <p className="subtitle">
-        A simple page. Beautifully crafted. Just for testing.
-      </p>
-      <button className="cta" onClick={() => setCount((c) => c + 1)}>
-        Say hello
-        <span className="arrow">›</span>
-      </button>
-      {count > 0 && (
-        <p className="count">
-          You've said hello {count} {count === 1 ? 'time' : 'times'}.
+    <div className="space">
+      <div className="stars stars-1" />
+      <div className="stars stars-2" />
+      <div className="stars stars-3" />
+      <div className="nebula nebula-purple" />
+      <div className="nebula nebula-blue" />
+      <div className="shooting-star" />
+
+      <main className="container">
+        <p className="eyebrow">Welcome, traveler</p>
+        <h1>Hello, universe.</h1>
+        <p className="subtitle">
+          A small signal sent across the cosmos. Just for you.
         </p>
-      )}
-    </main>
+        <button className="cta" onClick={() => setCount((c) => c + 1)}>
+          Send a signal
+          <span className="arrow">›</span>
+        </button>
+        {count > 0 && (
+          <p className="count">
+            {count} {count === 1 ? 'signal' : 'signals'} sent into the void.
+          </p>
+        )}
+      </main>
+    </div>
   )
 }
